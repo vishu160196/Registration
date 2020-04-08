@@ -1,0 +1,15 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.horizontal{
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.input-box{
+    padding:12px    
+}
