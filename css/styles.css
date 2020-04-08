@@ -13,3 +13,7 @@
 .input-box{
     padding:12px    
 }
+
+#name-error, #email-error, #password-error{
+    color: red;
+}
