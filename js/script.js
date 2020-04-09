@@ -33,4 +33,15 @@ $(document).ready(function () {
         onkeyup: false
     });
 
+    // $.get("https://ipinfo.io", function(response) {
+    //     alert(response.ip);
+    // }, "json")
+
+    $.getJSON("https://api.ipify.org?format=json",
+        function(data) {
+            document.getElementById('ip-holder').value = data.ip ;
+            console.log(data.ip);
+        });
+
+
 });
