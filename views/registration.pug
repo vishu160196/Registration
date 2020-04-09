@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        title Registration
+        link(rel="stylesheet" href="css/styles.css")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+
+    body
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js")
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js")
+        script(src="https://www.google.com/recaptcha/api.js")
+
+        .container
+            h1 Register
+            p Please fill in this form to create an account.
+            hr.horizontal
+
+            form#registration-form(method="post" action="submit")
+                .section
+                    label
+                        b Name
+                    input.input-box(name="name" type="text" placeholder="Enter name")
+
+                .section
+                    label
+                        b Email
+                    input.input-box(name="email" type="email" placeholder="Enter email")
+
+                .section
+                    label
+                        b Password
+                    input.input-box(name="password" type="password" placeholder="Enter password")
+
+                if recaptcha
+                    .g-recaptcha(data-sitekey="6Ld9DugUAAAAALczp8Zv3wLIrO_To6rQ5yBzr_p9")
+                    br
+                    input#submit-btn.submit(type="submit" value="Register")
+
+        script(src="js/script.js")

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr class="horizontal">
+      <form id="registration-form" method="post" action="submit">
+        <div class="section">
+          <label><b>Name</b></label>
+          <input class="input-box" name="name" type="text" placeholder="Enter name">
+        </div>
+        <div class="section">
+          <label><b>Email</b></label>
+          <input class="input-box" name="email" type="email" placeholder="Enter email">
+        </div>
+        <div class="section">
+          <label><b>Password</b></label>
+          <input class="input-box" name="password" type="password" placeholder="Enter password">
+        </div>
+      </form>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

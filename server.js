@@ -2,10 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
-const port = 8080;
+const port = 80;
+const MongoClient = require('mongodb').MongoClient;
+const requestCount = new Map();
+
+app.set('view engine', 'pug');
 
 app.get('/', (req, res) =>{
-    res.sendFile(__dirname + '/registration.html');
+    res.render('registration', {'recaptcha' : true});
 });
 
 app.get('/css/styles.css', (req, res) =>{
@@ -17,8 +21,7 @@ app.get('/js/script.js', (req, res) =>{
 });
 
 app.post('/submit', (req, res) =>{
-    console.log(req.body);
-    res.sendFile(__dirname + '/registration.html');
+    console.log(req.connection.remoteAddress);
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
