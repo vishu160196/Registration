@@ -23,18 +23,18 @@ $(document).ready(function () {
         }
     });
 
-    $('#registration-form').submit(function() {
-        if($(this).valid()){
-            $(this).ajaxSubmit({
-                error: function(xhr) {
-                    console.log('Error: ' + xhr.status);
-                },
-                success: function(response) {
-                    console.log(response);
-                }
-            });
-        }
-        //Very important line, it disable the page refresh.
-        return false;
-    });
+    // $('#registration-form').submit(function() {
+    //     if($(this).valid()){
+    //         $(this).ajaxSubmit({
+    //             error: function(xhr) {
+    //                 console.log('Error: ' + xhr.status);
+    //             },
+    //             success: function(response) {
+    //                 console.log(response);
+    //             }
+    //         });
+    //     }
+    //     //Very important line, it disable the page refresh.
+    //     return true;
+    // });
 });
